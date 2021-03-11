@@ -129,7 +129,7 @@ section:target {
   width: 100%;
   border-radius: 50%;
   border: 3px solid white;
-  box-shadow: 1px 1px 10px 2px lightgrey;
+  box-shadow: 1px 1px 1px 2px lightgrey;
 }
 
 #about-para {
@@ -303,6 +303,7 @@ box-shadow: 1px 1px 5px 2px #98989882
   top: 0;
   left: 0;
   height: 100%;
+
   color: transparent;
   text-align: center;
   padding: 10px;
@@ -317,6 +318,7 @@ box-shadow: 1px 1px 5px 2px #98989882
   background-color: #80808078;
   /* display: block; */
   color: white;
+  width: 95%;
 }
 
 /* Contact Form */
