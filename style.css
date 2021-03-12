@@ -631,3 +631,9 @@ button:focus {
     margin: 10%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .timeline-logo {
+    display: none;
+  }
+}
