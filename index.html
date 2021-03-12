@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,16 +6,49 @@
         Ketan's Resume
     </title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+    
 </head>
 <body>
 
+    
     <header id="body-header">
         <nav>
+            
+            <div class = "dropdown-menu text-right">
+                <div class="bars">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class ="dropdown-list nav-menu">
+                    <ul class = "no-list-style">
+                        <li >
+                            <a href="#"> Home </a>
+                        </li>
+                        <li>
+                            <a href="#about"> About </a>
+                        </li>
+                        <li>
+                            <a href="#skills"> Skills </a>
+                        </li>
+                        <li>
+                            <a href="#experience">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#education">Education</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    </div>
 
-            <ul class="horizontal-list text-center nav-menu">
+             </div>   
+
+            <ul class="no-list-style horizontal-list text-center nav-menu">
                 <li>
                     <a href="#"> Home </a>
                 </li>
@@ -31,28 +65,27 @@
                     <a href="#education">Education</a>
                 </li>
                 <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#portfolio">Projects</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
+
         </nav>
 
         <div id="name-social-container">
             <div class="text-center">
-                <h1 id="my-name">
-                    Ketan Sharma
-                </h1>
+                <h1 id="my-name">Ketan Sharma</h1>
             </div>
             <div>
-                <ul class="horizontal-list text-center social-icons">
+                <ul class="no-list-style horizontal-list text-center social-icons">
                     <li>
                         <a href="https://www.linkedin.com/in/ketan-sharma-508087193/">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
-
+                    
                     <li>
                         <a href="https://github.com/iamketan56">
                             <i class="fab fa-github"></i>
@@ -68,7 +101,6 @@
                             <i class="fab fa-hackerrank"></i>
                         </a>
                     </li>
-                  
                 </ul>
 
             </div>
@@ -183,46 +215,108 @@
             </h1>
 
             <div class="timeline">
-                <div class="timeline-box">
-                  <li> <span class="deg">Web Developer</span> </li>
-                   <p class="company1"> <br> (Jan 2021 - Feb 2021)</p>
 
-                </div>
-                <div class="timeline-box">
+                <div class="timeline-box ">
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="./img//saprl.PNG">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue"> Web Developer </h3>
+                        <h4 class="experience-company-name">The Sparks Foundation </h4>
+                        <h5 class="experience-duration m0"> Jan 2021 - Feb 2021 </h5>
 
-                    <li><span class="deg">Front-End Developer</span></li> 
-                   <p class="company2"><br> (Jan 2021 - March 2021)</p>
-                </div>
-                
-                <div class="timeline-divider">
-                    <div class="timeline-traveller">
-                        <i class="fas fa-plane"></i>
+                        <!-- <p class="experience-description text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
                     </div>
                 </div>
+                
+                <div class="timeline-box right ">
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="./img/logo.png">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue"> Frontend Developer </h3>
+                        <h4 class="experience-company-name"> DoorsTour </h4>
+                        <h5 class="experience-duration m0"> Jan 2021 - March 2021 </h5>
+                        <!-- <p class="experience-description text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
+                    </div>
+                </div>
+
+               
+                <div id="timeline-divider">
+                    <div class="timeline-traveller">
+                        <div>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+        </section>
 
 
 
         </section>
-
         <section id="education">
-            
+
             <h1 class="section-heading mb75px">
                 <span>
-                    <i class="fas fa-university"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </span>
-                <span> EDUCATION </span>
+                <span> Education </span>
             </h1>
-            <div id="stepContainer">
-                <div class="uni">B.TECH<p>(2018-2022)</p><p class="insti"> <span><i class="fas fa-school"></i></span><br><p> Chandigarh University</p></div>
-                <i class="fas fa-angle-double-right" id="arrow"></i>
-                <div class="ss">Senior Secondary <p>(2016)</p><span><i class="fas fa-school"></i></span><br> <p>A.M.S.S.School</p></div>
-                <i class="fas fa-angle-double-right" id="arrow"></i>
-               <div class="high">High School<p>(2014)</p><span><i class="fas fa-school"></i></span><br> <p>S.S.S School</p></div>
-              
-            </div>
-        </section>
 
+            <div class="timeline">
+
+                <div class="timeline-box left ">
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="./img/hbse_logo-removebg-preview.png">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue"> High School </h3>
+                        <h4 class="experience-company-name "> S.S.S School </h4>
+                        <h5 class="experience-duration m0"> 2014 </h5>
+
+                        <p class="experience-description text-justify">I have completed my high school in 2014 from Saraswati Senior Secondary School Village Pai District Kaithal from Haryana Board Of School Education with 87 % marks </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-box right ">
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="./img/aarho-removebg-preview.png">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue">  Higher secondary </h3>
+                        <h4 class="experience-company-name "> A.M.S.S.School </h4>
+                        <h5 class="experience-duration m0"> 2016 </h5>
+                        <p class="experience-description text-justify"> I have completed my higher secondary in 2016 from Aarohi Model Senior Secondary School Village Geong District Kaithal from Haryana Board Of School Education with 71.6 % marks</p>
+                    </div>
+                </div>
+
+                <div class="timeline-box left ">
+                    <div class="timeline-container">
+                        <div class="timeline-logo">
+                            <img src="./img/cu.png">
+                        </div>
+                        <h3 class="experience-designation  m0 m-blue"> Bachelor of Engineering</h3>
+                        <h4 class="experience-company-name "> Chandigarh University </h4>
+                        <h5 class="experience-duration m0">July 2018 - July 2022 </h5>
+
+                        <p class="experience-description text-justify"> I am pursuing my bachelor of engineering in the Information Technology field from Chandigarh university  with  7.7 CGPA till the 5th semester. </p>
+                    </div>
+                </div>
+                
+                <div id="timeline-divider">
+                    <div class="timeline-traveller">
+                        <div>
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
         <section id="portfolio">
             <h1 class="section-heading mb75px">
                 <span>
