@@ -4,6 +4,10 @@ body {
   font-size: 30px;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Body Header */
 
 #body-header {
@@ -14,6 +18,50 @@ body {
   background-position: center;
   background-attachment: fixed;
   padding-top: 1.2rem;
+}
+
+.bars {
+  color: white;
+  margin: 0;
+  margin-right: 5%;
+  display: none;
+}
+.dropdown-list {
+  margin: 0;
+  display: none;
+  background-color: #828470;
+  box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul {
+  margin: 0.2rem 0.2rem;
+  text-align: left;
+  padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list {
+  display: block;
+  position: absolute;
+  right: 3%;
+}
+
+.dropdown-list li {
+  margin: 0.4rem 0px;
+}
+
+.no-list-style {
+  list-style: none;
+}
+
+.no-list-style li {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.no-list-style li a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* Horizontal Lists */
@@ -75,7 +123,6 @@ body {
 }
 
 section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +182,7 @@ section:target {
 #about-para {
   padding: 10px;
   width: 60%;
-  height: 100%;
+
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
   text-align: justify;
@@ -182,94 +229,105 @@ box-shadow: 1px 1px 5px 2px #98989882
 }
 
 /*Timeline*/
-
 .timeline {
   position: relative;
   width: 75%;
 }
 
 .timeline-box {
-  position: relative;
-  margin: 5px;
+  padding: 5px;
   width: 40%;
-  left: 5%;
   min-height: 150px;
-  border-radius: 20px;
-  background-color: #045f7e;
-  line-height: 2.3rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  left: 5%;
+  text-align: right;
 }
-.timeline-box .company {
-  font-size: 20px;
-}
-.timeline-box .company1::before {
+
+.timeline-box::after {
   content: "";
-  background-image: url(./img/spa.jpeg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 70px;
-  width: 300px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: lightgrey;
+  top: 25%;
+  border-radius: 50%;
+  z-index: 1;
 }
-.timeline-box .company2::before {
-  content: "";
-  background-image: url(./img/logo.png);
-  background-position: center;
-  background-size: cover;
-  display: inline-block;
-  height: 40px;
-  width: 200px;
-}
+
 .timeline-box:nth-child(2n) {
   left: 53%;
 }
 
 .timeline-box:nth-child(2n + 1)::after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  right: -13%;
-  border-radius: 50%;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: red;
-  z-index: 1;
+  right: -11.8%;
 }
 
 .timeline-box:nth-child(2n)::after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: -13%;
-  border-radius: 50%;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: red;
-  z-index: 1;
+  left: -9%;
 }
 
-.timeline-divider {
+.timeline-container {
+  padding: 8px;
+}
+
+.timeline-logo {
   position: absolute;
-  height: 75%;
+  width: 100px;
+
+  overflow: hidden;
+}
+
+.timeline-logo > img {
+  width: 100%;
+}
+
+#timeline-divider {
+  position: absolute;
   width: 0;
-  border: 3px dashed #0096fa6b;
   top: 10%;
   left: 50%;
+  border: 1px dashed #0096fa6b;
+  height: 66%;
+  color: #49262d;
 }
 
-.timeline-traveller {
+#timeline-divider .timeline-traveller {
   position: sticky;
-  top: 30%;
-  transform: rotate(90deg);
+  top: 135px;
   z-index: 2;
 }
 
+#timeline-divider i {
+  transform: rotate(90deg);
+  margin-top: -35px;
+  display: block;
+  color: #01122c;
+}
+
+.experience-designation {
+  font-size: 1.4rem;
+}
+
+.experience-company-name {
+  margin: 5px 0 0;
+  color: #cba6d4;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.experience-duration {
+  color: #9e9b9b;
+  font-weight: 100;
+  color: grey;
+  font-size: 1rem;
+}
+
+.experience-description {
+  font-size: 14px;
+  padding: 2px;
+  color: grey;
+  line-height: 20px;
+}
 /* Portfolio Section */
 
 #portfolio-container {
@@ -329,11 +387,7 @@ box-shadow: 1px 1px 5px 2px #98989882
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /*background-image: linear-gradient(50deg,#2857a4 0%, #5378b1 74%);*/
-  /*background-image: linear-gradient(170deg,#2857a4 0%, #8496b2 74%);*/
-  /*background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
-  /*background-image: linear-gradient(to right,#13226fe0, #5473a2e0, #434ba8e0);*/
-  /*background-color: #13386fe0;*/
+
   color: white;
   padding-bottom: 40px;
 }
@@ -465,6 +519,9 @@ button:focus {
   background-color: #93738c;
 }
 
+.text-right {
+  text-align: right;
+}
 .m-blue {
   color: #2857a4;
 }
@@ -524,4 +581,53 @@ button:focus {
   color: rgb(255, 239, 239);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   box-shadow: 0px 0px 2px 3px gray;
+}
+
+@media only screen and (max-width: 572px) {
+  .timeline-box {
+    width: 100%;
+    left: 10% !important;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .timeline-box {
+    width: 90%;
+    left: 9% !important;
+  }
+
+  .timeline-box::after {
+    left: -9.3% !important;
+  }
+
+  #timeline-divider {
+    top: 10%;
+    left: 2%;
+  }
+
+  #contact-form {
+    margin-left: 0%;
+  }
+
+  #contact-container {
+    flex-wrap: wrap;
+  }
+
+  #my-details-container {
+    width: 80%;
+    margin: 10%;
+  }
+
+  #contact-form-container {
+    width: 80%;
+    margin: 10%;
+  }
 }
