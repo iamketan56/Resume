@@ -3,6 +3,10 @@ body {
   font-family: sans-serif;
   font-size: 30px;
 }
+p
+{
+  user-select:none;
+}
 
 body::-webkit-scrollbar {
   display: none;
